@@ -1,4 +1,6 @@
 {
 	"mongoURI": "mongodb+srv://isabel:isabel4321@cluster0.lepk6.mongodb.net/devconnector?retryWrites=true&w=majority",
-	"jwtSecret": "secret"
+	"jwtSecret": "secret",
+	"githubClientId": "3dbde33c36f5854c02f0",
+	"githubSecret": "984c2a568474d158097bc24ebe0772748faf6f59"
 }
