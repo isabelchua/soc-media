@@ -20,31 +20,32 @@ const Register = () => {
 
 	const onSubmit = async e => {
 		e.preventDefault();
-		if (password !== password2) {
-			console.log("password do not match");
-		} else {
-			console.log("success");
-			// const newUser = {
-			// 	name,
-			// 	email,
-			// 	password
-			// };
+		console.log("reg");
+		// if (password !== password2) {
+		// 	console.log("password do not match");
+		// } else {
+		// 	console.log("success");
+		// 	const newUser = {
+		// 		name,
+		// 		email,
+		// 		password
+		// 	};
 
-			// try {
-			// 	const config = {
-			// 		headers: {
-			// 			"Content-Type": "application/json"
-			// 		}
-			// 	};
+		// 	try {
+		// 		const config = {
+		// 			headers: {
+		// 				"Content-Type": "application/json"
+		// 			}
+		// 		};
 
-			// 	const body = JSON.stringify(newUser);
+		// 		const body = JSON.stringify(newUser);
 
-			// 	const res = await axios.post("/api/users", body, config);
-			// 	console.log(res.data);
-			// } catch (error) {
-			// 	console.error(error.response.data);
-			// }
-		}
+		// 		const res = await axios.post("/api/users", body, config);
+		// 		console.log(res.data);
+		// 	} catch (error) {
+		// 		console.error(error.response.data);
+		// 	}
+		// }
 	};
 
 	return (
