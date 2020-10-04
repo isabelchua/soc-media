@@ -5,6 +5,7 @@ import { getCurrentProfile } from "../../actions/profile";
 import Spinner from "../layout/Spinner";
 import userEvent from "@testing-library/user-event";
 import { Link } from "react-router-dom";
+import DashboardActions from "./DashboardActions";
 
 const Dashboard = ({
 	getCurrentProfile,
@@ -25,7 +26,7 @@ const Dashboard = ({
 			</p>{" "}
 			{profile !== null ? (
 				<>
-					has{" "}
+					<DashboardActions />
 					<Link to="/create-profile" className="btn btn-primary m-1">
 						Create Profile
 					</Link>
