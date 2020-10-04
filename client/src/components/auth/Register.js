@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { setAlert } from "../../actions/alert";
 
-const Register = () => {
+const Register = ({ setAlert }) => {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -20,32 +22,34 @@ const Register = () => {
 
 	const onSubmit = async e => {
 		e.preventDefault();
-		console.log("reg");
-		// if (password !== password2) {
-		// 	console.log("password do not match");
-		// } else {
-		// 	console.log("success");
-		// 	const newUser = {
-		// 		name,
-		// 		email,
-		// 		password
-		// 	};
 
-		// 	try {
-		// 		const config = {
-		// 			headers: {
-		// 				"Content-Type": "application/json"
-		// 			}
-		// 		};
+		if (password !== password2) {
+			//console.log("password do not match");
+			//props.setAlert("password do not match", "danger");
+			setAlert("password do not match", "danger");
+		} else {
+			console.log("success");
+			// 	const newUser = {
+			// 		name,
+			// 		email,
+			// 		password
+			// 	};
 
-		// 		const body = JSON.stringify(newUser);
+			// 	try {
+			// 		const config = {
+			// 			headers: {
+			// 				"Content-Type": "application/json"
+			// 			}
+			// 		};
 
-		// 		const res = await axios.post("/api/users", body, config);
-		// 		console.log(res.data);
-		// 	} catch (error) {
-		// 		console.error(error.response.data);
-		// 	}
-		// }
+			// 		const body = JSON.stringify(newUser);
+
+			// 		const res = await axios.post("/api/users", body, config);
+			// 		console.log(res.data);
+			// 	} catch (error) {
+			// 		console.error(error.response.data);
+			// 	}
+		}
 	};
 
 	return (
@@ -117,4 +121,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default connect(null, { setAlert })(Register);
